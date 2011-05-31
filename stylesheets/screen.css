@@ -1,0 +1,440 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* http://colorschemedesigner.com/#0242iw0w0w0w0 */
+/*
+$blue-hue: 220;
+$green-hue: 127;
+*/
+/* default scheme */
+.coda-slider-wrapper {
+  clear: both;
+  overflow: auto;
+  position: relative;
+  background: rgba(192, 141, 48, 0.5);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.coda-slider {
+  width: 528px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+.coda-slider .panel-container {
+  position: relative;
+}
+.coda-slider .panel-wrapper {
+  padding: 12px 24px 24px;
+}
+.coda-slider .panel {
+  width: 528px;
+  display: block;
+  float: left;
+}
+.coda-slider .thumb img {
+  width: 480px;
+}
+.coda-slider p.loading {
+  padding: 24px;
+  text-align: center;
+}
+
+.coda-nav-left,
+.coda-nav-right {
+  z-index: 5;
+  margin: 24px 24px 0;
+}
+.coda-nav-left a,
+.coda-nav-right a {
+  font-size: 24px;
+  color: #1147ac;
+  padding: 5px;
+  display: block;
+  text-decoration: none;
+}
+
+.coda-nav-left {
+  float: left;
+  position: relative;
+}
+
+.coda-nav-right {
+  position: absolute;
+  right: 0;
+}
+
+.coda-nav {
+  position: absolute;
+  width: 528px;
+}
+.coda-nav ul {
+  clear: both;
+  display: block;
+  margin: 24px auto 0;
+  overflow: hidden;
+}
+.coda-nav ul li {
+  display: inline;
+}
+.coda-nav ul li a {
+  font-size: 36px;
+  color: #1147ac;
+  display: block;
+  float: left;
+  padding: 0 6px;
+  text-decoration: none;
+}
+.coda-nav ul li a.current {
+  color: white;
+}
+
+/* Use this to keep the slider content contained in a box even when JavaScript is disabled */
+.coda-slider-no-js .coda-slider {
+  height: 200px;
+  overflow: auto !important;
+  padding-right: 20px;
+}
+
+/* 11, 13, 17, 21, 27.5, 34, 44.5, 55, 72 */
+body {
+  font: 17px/24px "OFL Sorts Mill Goudy TT", Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.small, small {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p {
+  margin-bottom: 1em;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: #1147ac;
+}
+
+abbr {
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
+
+::selection {
+  background: #ffcf75;
+}
+
+::-moz-selection {
+  background: #ffcf75;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+body {
+  -webkit-tap-highlight-color: #ffcf75;
+}
+
+html {
+  background: url("/images/bg.jpg");
+}
+
+body {
+  margin: 0 auto;
+  color: #222222;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.15)));
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+}
+
+#container {
+  margin: 0 auto;
+  *zoom: 1;
+}
+#container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.services-sprite, .services-email, .services-facebook, .services-linkedin, .services-twitter {
+  background: url('/images/services-d81cdae990.png') no-repeat;
+}
+
+.services-email {
+  background-position: 0 0;
+}
+
+.services-facebook {
+  background-position: 0 -24px;
+}
+
+.services-linkedin {
+  background-position: 0 -48px;
+}
+
+.services-twitter {
+  background-position: 0 -72px;
+}
+
+header {
+  background: rgba(0, 121, 128, 0.75);
+  -moz-box-shadow: rgba(0, 121, 128, 0.75) 0 0 8px;
+  -webkit-box-shadow: rgba(0, 121, 128, 0.75) 0 0 8px;
+  -o-box-shadow: rgba(0, 121, 128, 0.75) 0 0 8px;
+  box-shadow: rgba(0, 121, 128, 0.75) 0 0 8px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -o-border-bottom-left-radius: 4px;
+  -ms-border-bottom-left-radius: 4px;
+  -khtml-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -o-border-bottom-right-radius: 4px;
+  -ms-border-bottom-right-radius: 4px;
+  -khtml-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border: 1px solid #007980;
+  border-width: 0 1px 1px;
+  color: white;
+}
+header h1 {
+  color: #ffa600;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 0 4px;
+  font: bold 34px/48px "Josefin Sans", verdana, sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  text-rendering: optimizeLegibility;
+  /* kerning! */
+}
+header h1 .char2 {
+  margin-left: -4px;
+}
+header h1 .char3 {
+  margin-left: -7px;
+}
+header h1 .char4 {
+  margin-left: -2px;
+}
+header h1 .char9 {
+  margin-left: -4px;
+}
+header h1 .char10 {
+  margin-left: -8px;
+}
+header h1 .char11 {
+  margin-left: -1px;
+}
+header h1 .char12 {
+  margin-left: -1px;
+}
+header h1 .char13 {
+  margin-left: -1px;
+}
+header h1 .char14 {
+  margin-left: -1px;
+}
+header h2 {
+  font: bold 21px/24px "Josefin Sans", verdana, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+header p {
+  clear: left;
+}
+header #services {
+  letter-spacing: 10px;
+  margin: 12px 0;
+}
+header #services a {
+  width: 24px;
+  height: 24px;
+  text-indent: -9999px;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+}
+header #services a {
+  *display: inline;
+}
+
+nav#work {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(168, 8, 0, 0.8)), color-stop(50%, rgba(255, 13, 0, 0.8)), color-stop(100%, rgba(255, 13, 0, 0.8)));
+  background-image: -webkit-linear-gradient(rgba(168, 8, 0, 0.8), rgba(255, 13, 0, 0.8), rgba(255, 13, 0, 0.8));
+  background-image: -moz-linear-gradient(rgba(168, 8, 0, 0.8), rgba(255, 13, 0, 0.8), rgba(255, 13, 0, 0.8));
+  background-image: -o-linear-gradient(rgba(168, 8, 0, 0.8), rgba(255, 13, 0, 0.8), rgba(255, 13, 0, 0.8));
+  background-image: linear-gradient(rgba(168, 8, 0, 0.8), rgba(255, 13, 0, 0.8), rgba(255, 13, 0, 0.8));
+  -moz-box-shadow: rgba(255, 13, 0, 0.8) 0 0 4px;
+  -webkit-box-shadow: rgba(255, 13, 0, 0.8) 0 0 4px;
+  -o-box-shadow: rgba(255, 13, 0, 0.8) 0 0 4px;
+  box-shadow: rgba(255, 13, 0, 0.8) 0 0 4px;
+  border-bottom: 1px solid #ffbd42;
+  height: 72px;
+}
+nav#work ul {
+  list-style: none;
+  margin: 0 auto;
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  box-orient: horizontal;
+  -moz-box-align: stretch;
+  -webkit-box-align: stretch;
+  box-align: stretch;
+}
+nav#work ul li {
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+nav#work a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 36px 0 12px;
+  color: #ffa600;
+  font: bold 21px/24px "Josefin Sans", verdana, sans-serif;
+  text-transform: uppercase;
+}
+nav#work a.on {
+  color: white;
+  cursor: default;
+}
+
+#projects section h3 {
+  font: bold 28px/24px "Josefin Sans", verdana, sans-serif;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+  color: #333;
+}
+#projects section h4 {
+  font: bold 21px/24px "Josefin Sans", verdana, sans-serif;
+  letter-spacing: -1px;
+}
+#projects section img {
+  margin-top: 11px;
+}
+
+/* Default Layout: 992px.
+   Gutters: 24px.
+   Outer margins: 48px.
+   Leftover space for scrollbars @1024px: 32px.  */
+#container {
+  width: 896px;
+  /*    padding: 72px 48px 84px;*/
+  padding-bottom: 48px;
+}
+#container header {
+  width: 296px;
+  position: absolute;
+  z-index: 2;
+  padding: 24px;
+  float: left;
+}
+#container header h1, #container header h2, #container header #services {
+  text-align: center;
+}
+#container #main nav#work {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+#container #main nav#work #nav-wrapper {
+  width: 896px;
+  margin: 0 auto;
+}
+#container #main nav#work #nav-wrapper ul {
+  width: 528px;
+  margin-left: 368px;
+}
+#container #main #projects {
+  margin: 96px 0 0 368px;
+  width: 528px;
+  float: left;
+}
+#container #main #projects img {
+  width: 480px;
+}
+
+/*
+@import "partials/tablet";
+@import "partials/mobile";
+@import "partials/wide-mobile";
+@import "partials/high-px-ratio";
+*/
