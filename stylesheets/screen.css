@@ -314,6 +314,11 @@ header h2 {
 header p {
   clear: left;
 }
+header .info {
+  text-align: center;
+  font-size: 13px;
+  line-height: 18px;
+}
 header #services {
   letter-spacing: 10px;
   margin: 12px 0;
