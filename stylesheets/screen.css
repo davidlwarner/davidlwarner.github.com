@@ -65,6 +65,7 @@ $green-hue: 127;
   clear: both;
   overflow: auto;
   position: relative;
+  background: #e2c48d;
   background: rgba(192, 141, 48, 0.5);
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -258,6 +259,7 @@ body {
 }
 
 header {
+  background: #007980;
   background: rgba(0, 121, 128, 0.75);
   -moz-box-shadow: rgba(0, 121, 128, 0.75) 0 0 8px;
   -webkit-box-shadow: rgba(0, 121, 128, 0.75) 0 0 8px;
@@ -282,14 +284,14 @@ header {
 header h1 {
   color: #ffa600;
   text-shadow: rgba(0, 0, 0, 0.25) 0 0 4px;
-  font: 34px/48px "BonvenoCFLight", verdana, sans-serif;
+  font: 34px/48px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
   text-transform: uppercase;
   margin-bottom: 24px;
   text-rendering: optimizeLegibility;
   letter-spacing: -3px;
 }
 header h2 {
-  font: 21px/24px "BonvenoCFLight", verdana, sans-serif;
+  font: 21px/24px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
   text-rendering: optimizeLegibility;
   letter-spacing: -2px;
 }
@@ -320,6 +322,7 @@ header #services a {
 }
 
 nav#work {
+  background: #ff0d00;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(168, 8, 0, 0.8)), color-stop(50%, rgba(255, 13, 0, 0.8)), color-stop(100%, rgba(255, 13, 0, 0.8)));
   background-image: -webkit-linear-gradient(rgba(168, 8, 0, 0.8), rgba(255, 13, 0, 0.8), rgba(255, 13, 0, 0.8));
   background-image: -moz-linear-gradient(rgba(168, 8, 0, 0.8), rgba(255, 13, 0, 0.8), rgba(255, 13, 0, 0.8));
@@ -356,7 +359,7 @@ nav#work a {
   text-decoration: none;
   padding: 36px 0 12px;
   color: #ffa600;
-  font: 21px/24px "BonvenoCFLight", verdana, sans-serif;
+  font: 21px/24px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
   text-transform: uppercase;
   letter-spacing: -1px;
 }
@@ -366,13 +369,13 @@ nav#work a.on {
 }
 
 #projects section h3 {
-  font: 28px/24px "BonvenoCFLight", verdana, sans-serif;
+  font: 28px/24px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
   letter-spacing: -3px;
   margin-bottom: 24px;
   color: #333;
 }
 #projects section h4 {
-  font: 21px/24px "BonvenoCFLight", verdana, sans-serif;
+  font: 21px/24px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
   letter-spacing: -2px;
 }
 #projects section img {

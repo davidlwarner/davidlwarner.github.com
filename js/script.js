@@ -1,8 +1,9 @@
 $(window).load(function() {
   $(".coda-slider").each(function (t) {
+    l_arrow = $.browser.mac() ? "◀" : "◄";
     $(this).codaSlider({
-      dynamicArrowLeftText: "◀",
-      dynamicArrowRightText: "▶",
+      dynamicArrowLeftText: l_arrow,
+      dynamicArrowRightText: "►",
       crossLinking: false
     });
   });
