@@ -122,11 +122,14 @@ $green-hue: 127;
 .coda-nav-right {
   position: absolute;
   right: 0;
+  top: 0;
 }
 
 .coda-nav {
   position: absolute;
   width: 528px;
+  top: 0;
+  left: 0;
 }
 .coda-nav ul {
   clear: both;
@@ -306,11 +309,15 @@ header .info {
 header #services {
   letter-spacing: 10px;
   margin: 12px 0;
+  *margin-left: 85px;
 }
 header #services a {
   width: 24px;
   height: 24px;
   text-indent: -9999px;
+  *display: block;
+  *float: left;
+  *margin-right: 10px;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
