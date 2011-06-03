@@ -33,8 +33,4 @@ $(window).load(function() {
       return false;
     });
   });
-  
-  $(document).ready(function() {
-    $("h1").lettering();
-  });
 });

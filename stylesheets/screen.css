@@ -161,6 +161,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@font-face {
+  font-family: 'BonvenoCFLight';
+  src: url("/fonts/BonvenoCF-Light-webfont.eot");
+  src: url("/fonts/BonvenoCF-Light-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/BonvenoCF-Light-webfont.woff") format("woff"), url("/fonts/BonvenoCF-Light-webfont.ttf") format("truetype"), url("/fonts/BonvenoCF-Light-webfont.svg#BonvenoCFLight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .small, small {
   font-size: 13px;
   line-height: 18px;
@@ -203,7 +211,7 @@ body {
 }
 
 html {
-  background: url("/images/bg.jpg");
+  background: #eeeeee url("/images/bg.jpg");
 }
 
 body {
@@ -274,42 +282,16 @@ header {
 header h1 {
   color: #ffa600;
   text-shadow: rgba(0, 0, 0, 0.25) 0 0 4px;
-  font: bold 34px/48px "Josefin Sans", verdana, sans-serif;
+  font: 34px/48px "BonvenoCFLight", verdana, sans-serif;
   text-transform: uppercase;
   margin-bottom: 24px;
   text-rendering: optimizeLegibility;
-  /* kerning! */
-}
-header h1 .char2 {
-  margin-left: -4px;
-}
-header h1 .char3 {
-  margin-left: -7px;
-}
-header h1 .char4 {
-  margin-left: -2px;
-}
-header h1 .char9 {
-  margin-left: -4px;
-}
-header h1 .char10 {
-  margin-left: -8px;
-}
-header h1 .char11 {
-  margin-left: -1px;
-}
-header h1 .char12 {
-  margin-left: -1px;
-}
-header h1 .char13 {
-  margin-left: -1px;
-}
-header h1 .char14 {
-  margin-left: -1px;
+  letter-spacing: -3px;
 }
 header h2 {
-  font: bold 21px/24px "Josefin Sans", verdana, sans-serif;
+  font: 21px/24px "BonvenoCFLight", verdana, sans-serif;
   text-rendering: optimizeLegibility;
+  letter-spacing: -2px;
 }
 header p {
   clear: left;
@@ -374,8 +356,9 @@ nav#work a {
   text-decoration: none;
   padding: 36px 0 12px;
   color: #ffa600;
-  font: bold 21px/24px "Josefin Sans", verdana, sans-serif;
+  font: 21px/24px "BonvenoCFLight", verdana, sans-serif;
   text-transform: uppercase;
+  letter-spacing: -1px;
 }
 nav#work a.on {
   color: white;
@@ -383,14 +366,14 @@ nav#work a.on {
 }
 
 #projects section h3 {
-  font: bold 28px/24px "Josefin Sans", verdana, sans-serif;
-  letter-spacing: -1px;
+  font: 28px/24px "BonvenoCFLight", verdana, sans-serif;
+  letter-spacing: -3px;
   margin-bottom: 24px;
   color: #333;
 }
 #projects section h4 {
-  font: bold 21px/24px "Josefin Sans", verdana, sans-serif;
-  letter-spacing: -1px;
+  font: 21px/24px "BonvenoCFLight", verdana, sans-serif;
+  letter-spacing: -2px;
 }
 #projects section img {
   margin-top: 11px;
