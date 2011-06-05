@@ -266,30 +266,29 @@ header#site #basic-info {
   border: 1px solid #007980;
   border-width: 0 1px 1px;
   color: white;
+  padding: 6px 0;
 }
 header#site #basic-info h1 {
   color: #ffa600;
   text-shadow: rgba(0, 0, 0, 0.25) 0 0 4px;
   font: 34px/48px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
   text-transform: uppercase;
-  margin-bottom: 24px;
   text-rendering: optimizeLegibility;
   letter-spacing: -3px;
+  margin-bottom: 0;
 }
 header#site #basic-info h2 {
-  font: 21px/24px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
+  font: 21px/48px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
   text-rendering: optimizeLegibility;
   letter-spacing: -2px;
 }
 header#site #basic-info .info {
-  text-align: center;
   font-size: 13px;
   line-height: 18px;
+  margin-bottom: 6px;
 }
 header#site #basic-info #services {
   letter-spacing: 10px;
-  margin: 12px 0;
-  *margin-left: 85px;
 }
 header#site #basic-info #services a {
   width: 24px;
@@ -395,9 +394,13 @@ header#site h1 {
 }
 header#site h2 {
   float: left;
+  margin: 0;
 }
 header#site #contact-info {
   float: right;
+}
+header#site #contact-info p {
+  margin: 0;
 }
 header#site #about-me {
   padding: 24px 0;
@@ -443,47 +446,6 @@ header#site #about-me #bio {
   width: 712px;
 }
 
-/*
-#{$less-grid-element} {
-  @include grid(10);
-  
-  padding-bottom: 48px;
-  
-  header {
-    width: 296px;
-    position: absolute;
-    z-index: 2;
-    padding: 24px;
-    float: left;
-    h1, h2, #services {
-      text-align: center;
-    }
-  }
-  #main {
-    nav#work {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      #nav-wrapper {
-        @include column(10, true);
-        margin: 0 auto;
-        ul {
-          @include column(6, true);
-          margin-left: 368px;
-        }
-      }
-    }
-    #projects {
-      margin: 96px 0 0 368px;
-      @include column(6, true);
-      float: left;
-      img {
-        width: 480px;
-      }
-    }
-  }
-}
-*/
 /*
 @import "partials/tablet";
 @import "partials/mobile";
