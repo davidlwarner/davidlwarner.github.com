@@ -8,7 +8,7 @@ $(window).load(function() {
     });
   });
   
-  $('nav#work').children().children().children().each(function (c) {
+  $('nav#work').find('li').each(function (c) {
     // Hide all but first
     anchor = $(this).children('a');
 
