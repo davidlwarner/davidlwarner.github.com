@@ -68,29 +68,15 @@ $green-hue: 127;
 }
 
 .coda-slider {
-  width: 896px;
-  float: left;
   overflow: hidden;
   position: relative;
-  margin-top: 12px;
 }
 .coda-slider .panel-container {
   position: relative;
 }
 .coda-slider .panel {
-  width: 896px;
   display: block;
   float: left;
-}
-.coda-slider .panel img {
-  width: 344px;
-  margin-right: 24px;
-  float: left;
-  display: block;
-}
-.coda-slider .panel p {
-  width: 528px;
-  margin-left: 368px;
 }
 .coda-slider p.loading {
   padding: 24px;
@@ -369,7 +355,10 @@ nav#work a.on {
 #projects section h4 {
   font: 21px/24px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
   letter-spacing: -2px;
-  margin-bottom: 12px;
+  margin: 12px 0;
+}
+#projects section img {
+  cursor: pointer;
 }
 
 /* Default Layout: 992px.
@@ -441,6 +430,57 @@ header#site #about-me #bio {
 #main #projects .info {
   float: left;
   width: 712px;
+}
+#main #projects .coda-slider {
+  width: 896px;
+  min-height: 540px;
+}
+#main #projects .coda-slider .panel {
+  width: 896px;
+  position: relative;
+}
+#main #projects .coda-slider img {
+  width: 344px;
+  margin-right: 24px;
+  float: left;
+  display: block;
+  -moz-transition-property: width;
+  -webkit-transition-property: width;
+  -o-transition-property: width;
+  transition-property: width;
+  -moz-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  position: relative;
+  z-index: 2;
+}
+#main #projects .coda-slider img.zoom {
+  /*          width: auto;
+            max-width: 896px; // 10col
+            float: none;
+            margin: 0 auto;*/
+  width: 896px;
+  float: none;
+}
+#main #projects .coda-slider .about {
+  width: 528px;
+  left: 368px;
+  margin-top: 48px;
+  -moz-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}
+#main #projects .coda-slider .about.hide {
+  opacity: 0;
 }
 
 /*

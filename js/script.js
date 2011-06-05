@@ -34,4 +34,14 @@ $(window).load(function() {
       return false;
     });
   });
+  
+  // click it
+  $('.panel img').each(function (i) {
+    $(this).click(function() {
+      $(this).toggleClass('zoom');
+      $(this).siblings('.about').each(function (p) {
+        $(this).toggleClass('hide');
+      });
+    });
+  });
 });
