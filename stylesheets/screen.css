@@ -65,18 +65,15 @@ $green-hue: 127;
   clear: both;
   overflow: auto;
   position: relative;
-  background: #e2c48d;
-  background: rgba(192, 141, 48, 0.5);
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  border-radius: 4px;
+  /*
+    background: lighten($dark-orange, 25);
+    background: rgba($dark-orange, .5);
+    @include border-radius(4px);
+  */
 }
 
 .coda-slider {
-  width: 528px;
+  width: 896px;
   float: left;
   overflow: hidden;
   position: relative;
@@ -84,16 +81,20 @@ $green-hue: 127;
 .coda-slider .panel-container {
   position: relative;
 }
-.coda-slider .panel-wrapper {
-  padding: 12px 24px 24px;
-}
 .coda-slider .panel {
-  width: 528px;
+  width: 896px;
   display: block;
   float: left;
 }
-.coda-slider .thumb img {
-  width: 480px;
+.coda-slider .panel img {
+  width: 344px;
+  margin-right: 24px;
+  float: left;
+  display: block;
+}
+.coda-slider .panel p {
+  width: 528px;
+  margin-left: 368px;
 }
 .coda-slider p.loading {
   padding: 24px;
@@ -127,7 +128,7 @@ $green-hue: 127;
 
 .coda-nav {
   position: absolute;
-  width: 528px;
+  width: 896px;
   top: 0;
   left: 0;
 }
@@ -221,24 +222,6 @@ html {
 body {
   margin: 0 auto;
   color: #222222;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.15)));
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
-  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
-}
-
-#container {
-  margin: 0 auto;
-  *zoom: 1;
-}
-#container:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
 }
 
 .services-sprite, .services-email, .services-facebook, .services-linkedin, .services-twitter {
@@ -261,7 +244,7 @@ body {
   background-position: 0 -72px;
 }
 
-header {
+header#site #basic-info {
   background: #007980;
   background: rgba(0, 121, 128, 0.75);
   -moz-box-shadow: rgba(0, 121, 128, 0.75) 0 0 8px;
@@ -284,7 +267,7 @@ header {
   border-width: 0 1px 1px;
   color: white;
 }
-header h1 {
+header#site #basic-info h1 {
   color: #ffa600;
   text-shadow: rgba(0, 0, 0, 0.25) 0 0 4px;
   font: 34px/48px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
@@ -293,25 +276,22 @@ header h1 {
   text-rendering: optimizeLegibility;
   letter-spacing: -3px;
 }
-header h2 {
+header#site #basic-info h2 {
   font: 21px/24px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
   text-rendering: optimizeLegibility;
   letter-spacing: -2px;
 }
-header p {
-  clear: left;
-}
-header .info {
+header#site #basic-info .info {
   text-align: center;
   font-size: 13px;
   line-height: 18px;
 }
-header #services {
+header#site #basic-info #services {
   letter-spacing: 10px;
   margin: 12px 0;
   *margin-left: 85px;
 }
-header #services a {
+header#site #basic-info #services a {
   width: 24px;
   height: 24px;
   text-indent: -9999px;
@@ -324,7 +304,7 @@ header #services a {
   vertical-align: middle;
   *vertical-align: auto;
 }
-header #services a {
+header#site #basic-info #services a {
   *display: inline;
 }
 
@@ -393,43 +373,117 @@ nav#work a.on {
    Gutters: 24px.
    Outer margins: 48px.
    Leftover space for scrollbars @1024px: 32px.  */
-#container {
+.container {
   width: 896px;
   /*    padding: 72px 48px 84px;*/
-  padding-bottom: 48px;
-}
-#container header {
-  width: 296px;
-  position: absolute;
-  z-index: 2;
-  padding: 24px;
-  float: left;
-}
-#container header h1, #container header h2, #container header #services {
-  text-align: center;
-}
-#container #main nav#work {
-  position: absolute;
-  width: 100%;
-  left: 0;
-}
-#container #main nav#work #nav-wrapper {
-  width: 896px;
   margin: 0 auto;
+  *zoom: 1;
 }
-#container #main nav#work #nav-wrapper ul {
-  width: 528px;
-  margin-left: 368px;
-}
-#container #main #projects {
-  margin: 96px 0 0 368px;
-  width: 528px;
-  float: left;
-}
-#container #main #projects img {
-  width: 480px;
+.container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
 }
 
+header#site h1 {
+  width: 344px;
+  margin-right: 24px;
+  float: left;
+}
+header#site h2 {
+  float: left;
+}
+header#site #contact-info {
+  float: right;
+}
+header#site #about-me {
+  padding: 24px 0;
+  min-height: 188px;
+}
+header#site #about-me img {
+  position: absolute;
+  z-index: 1;
+}
+header#site #about-me #bio {
+  width: 528px;
+  margin-left: 368px;
+  float: left;
+}
+
+#main {
+  position: relative;
+  z-index: 2;
+  background: #eeeeee url("/images/bg.jpg");
+}
+#main nav#work {
+  margin-bottom: 24px;
+}
+#main nav#work h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: white;
+}
+#main #projects {
+  /*    @include background-image(linear-gradient(rgba(0, 0, 0, 0), 
+                                                rgba(0, 0, 0, 0),
+                                                rgba(0, 0, 0, 0.15)));*/
+}
+#main #projects header {
+  float: left;
+  width: 160px;
+  margin-right: 24px;
+}
+#main #projects .info {
+  float: left;
+  width: 712px;
+}
+
+/*
+#{$less-grid-element} {
+  @include grid(10);
+  
+  padding-bottom: 48px;
+  
+  header {
+    width: 296px;
+    position: absolute;
+    z-index: 2;
+    padding: 24px;
+    float: left;
+    h1, h2, #services {
+      text-align: center;
+    }
+  }
+  #main {
+    nav#work {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      #nav-wrapper {
+        @include column(10, true);
+        margin: 0 auto;
+        ul {
+          @include column(6, true);
+          margin-left: 368px;
+        }
+      }
+    }
+    #projects {
+      margin: 96px 0 0 368px;
+      @include column(6, true);
+      float: left;
+      img {
+        width: 480px;
+      }
+    }
+  }
+}
+*/
 /*
 @import "partials/tablet";
 @import "partials/mobile";
