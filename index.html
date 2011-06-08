@@ -16,7 +16,7 @@
     <link href='/favicon.ico' rel='shortcut icon'>
     <link href='/apple-touch-icon.png' rel='apple-touch-icon'>
   </head>
-  <body class='coda-slider-no-js'>
+  <body>
     <div id='container'>
       <header class='vcard' id='site' itemscope itemtype='http://schema.org/Person'>
         <div id='basic-info'>
@@ -24,17 +24,17 @@
             <h1 class='fn' itemprop='name'>David L Warner</h1>
             <h2 class='role'>UX Designer & Developer</h2>
             <div id='contact-info'>
-              <p class='info'>
-                <span class='tel' itemprop='telephone'>415-609-7490</span>
-                <span class='adr' itemprop='address' itemscope itemtype='http://schema.org/PostalAddress'><span class='locality' itemprop='addressLocality'>San Francisco</span>,
-                  <abbr class='region' itemprop='addressRegion' title='California'>CA</abbr>
-                </span>
-              </p>
               <p id='services'>
                 <a class='services-linkedin url' href='http://www.linkedin.com/in/davidlwarner' rel='me'>LinkedIn</a>
                 <a class='services-twitter url' href='http://twitter.com/davidlwarner' rel='me'>Twitter</a>
                 <a class='services-facebook url' href='http://www.facebook.com/davidw' rel='me'>Facebook</a>
                 <a class='services-email email' href='mailto:david@davidlwarner.com' itemprop='email'>david@davidlwarner.com</a>
+              </p>
+              <p class='info'>
+                <span class='tel' itemprop='telephone'>415-609-7490</span>
+                <span class='adr' itemprop='address' itemscope itemtype='http://schema.org/PostalAddress'><span class='locality' itemprop='addressLocality'>San Francisco</span>,
+                  <abbr class='region' itemprop='addressRegion' title='California'>CA</abbr>
+                </span>
               </p>
             </div>
           </div>
@@ -49,7 +49,6 @@
       <div id='main'>
         <nav id='work'>
           <div class='container'>
-            <h2>Recent Work</h2>
             <div id='nav-wrapper'>
               <ul>
                 <li><a class="on" href="#ning">Ning</a></li>
@@ -69,8 +68,8 @@
             <div class='info'>
               <p>I was a designer and client-side developer for Ning’s primary product, “Your Own Social Network,” for 3 years, beginning with its inception in 2006. By the time I left in 2009, the product had 36 million users and 1.6 million social networks. Our small design team, consisting of just myself and another designer for the first 2 years, created most of the interaction and graphic design, as well as production <abbr><span class="caps">HTML</span></abbr> and <abbr><span class="caps">CSS</span></abbr> code.</p>
             </div>
-            <div class='coda-slider-wrapper'>
-              <div class='coda-slider' id='coda-slider-3'>
+            <div class='panel-container'>
+              <div class='panel-container-inside'>
                 <div class='panel'>
                   <h4>The “Create Your Own Network” Flow</h4>
                   <img alt="Gyo" src="images/ning/gyo.jpg">
@@ -113,8 +112,8 @@
             <div class='info'>
               <p>In 2010, I was the lead interaction and graphic designer for Crowdcast’s enterprise prediction market. I led a redesign of the product to make it easier for users and administrators to use and understand. The product was used by Electronic Arts, Hallmark, and several other major product and retail companies to gather and interpret information from their employees.</p>
             </div>
-            <div class='coda-slider-wrapper'>
-              <div class='coda-slider' id='coda-slider-2'>
+            <div class='panel-container'>
+              <div class='panel-container-inside'>
                 <div class='panel'>
                   <h4>Updated Design</h4>
                   <img alt="Placebet" src="images/crowdcast/placebet.png">
@@ -148,8 +147,8 @@
             <div class='info'>
               <p>In the first half of 2011, I worked on the interaction and graphic design of LoudSauce’s crowd-funded advertising platform. I collaborated with 2 Rails developers to design and build a functioning site, starting from an existing static website prototype.</p>
             </div>
-            <div class='coda-slider-wrapper'>
-              <div class='coda-slider preload' id='coda-slider-1'>
+            <div class='panel-container'>
+              <div class='panel-container-inside'>
                 <div class='panel'>
                   <h4>Interaction Design</h4>
                   <img alt="Home" src="images/loudsauce/home.jpg">
@@ -178,10 +177,11 @@
       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
-    <script src='/js/jquery.coda-slider-2.0.js'></script>
-    <script src='/js/jquery.animate-enhanced.min.js'></script>
+    <!-- %script{ :src => "/js/jquery.coda-slider-2.0.js" } -->
+    <!-- %script{ :src => "/js/jquery.animate-enhanced.min.js" } -->
     <!-- %script{ :src => "http://cycle-plugin.googlecode.com/files/jquery.cycle.all.min.js" } -->
     <!-- %script{ :src => "/js/ios-scroll.js" } -->
+    <!-- %script{ :src => "/js/jquery.cycle.all.min.js" } -->
     <!-- %script{ :src => "/js/jquery.touchwipe.min.js" } -->
     <script src='/js/script.js'></script>
     <script src='/js/jqbrowser-compressed.js'></script>

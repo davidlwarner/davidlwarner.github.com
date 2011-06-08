@@ -61,95 +61,7 @@ $blue-hue: 220;
 $green-hue: 127;
 */
 /* default scheme */
-.coda-slider-wrapper {
-  clear: both;
-  overflow: auto;
-  position: relative;
-}
-
-.coda-slider {
-  overflow: hidden;
-  position: relative;
-}
-.coda-slider .panel-container {
-  position: relative;
-}
-.coda-slider .panel {
-  display: block;
-  float: left;
-}
-.coda-slider p.loading {
-  padding: 24px;
-  text-align: center;
-}
-
-.coda-nav-left,
-.coda-nav-right {
-  z-index: 5;
-  margin: 8px 12px 0;
-}
-.coda-nav-left a,
-.coda-nav-right a {
-  font-size: 18px;
-  color: #1147ac;
-  padding: 5px;
-  display: block;
-  text-decoration: none;
-}
-
-.coda-nav-left {
-  float: left;
-  position: relative;
-}
-
-.coda-nav-right {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.coda-nav {
-  position: absolute;
-  width: 896px;
-  top: 0;
-  left: 0;
-  background: #e2c48d;
-  background: rgba(192, 141, 48, 0.5);
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  border-radius: 4px;
-}
-.coda-nav ul {
-  clear: both;
-  display: block;
-  margin: 12px auto 8px;
-  overflow: hidden;
-}
-.coda-nav ul li {
-  display: inline;
-}
-.coda-nav ul li a {
-  font-size: 36px;
-  color: #1147ac;
-  display: block;
-  float: left;
-  padding: 0 6px;
-  text-decoration: none;
-}
-.coda-nav ul li a.current {
-  color: white;
-}
-
-/* Use this to keep the slider content contained in a box even when JavaScript is disabled */
-.coda-slider-no-js .coda-slider {
-  height: 200px;
-  overflow: auto !important;
-  padding-right: 20px;
-}
-
+/*@import "partials/slider";*/
 /* 11, 13, 17, 21, 27.5, 34, 44.5, 55, 72 */
 body {
   font: 17px/24px "OFL Sorts Mill Goudy TT", Georgia, serif;
@@ -160,6 +72,14 @@ body {
   font-family: 'BonvenoCFLight';
   src: url("/fonts/BonvenoCF-Light-webfont.eot");
   src: url("/fonts/BonvenoCF-Light-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/BonvenoCF-Light-webfont.woff") format("woff"), url("/fonts/BonvenoCF-Light-webfont.ttf") format("truetype"), url("/fonts/BonvenoCF-Light-webfont.svg#BonvenoCFLight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url("/fonts/LeagueGothic/League_Gothic-webfont.eot");
+  src: url("/fonts/LeagueGothic/League_Gothic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/LeagueGothic/League_Gothic-webfont.woff") format("woff"), url("/fonts/LeagueGothic/League_Gothic-webfont.ttf") format("truetype"), url("/fonts/LeagueGothic/League_Gothic-webfont.svg#LeagueGothicRegular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -244,44 +164,53 @@ header#site #basic-info {
   border-bottom: 1px solid #007980;
   color: white;
   padding: 6px 0;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 0 3px;
 }
 header#site #basic-info h1 {
-  color: #ffa600;
-  text-shadow: rgba(0, 0, 0, 0.25) 0 0 4px;
-  font: 34px/48px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
+  font: 72px/72px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
-  letter-spacing: -3px;
+  letter-spacing: -1px;
   margin-bottom: 0;
 }
 header#site #basic-info h2 {
-  font: 21px/48px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
+  font: 45px/45px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
   text-rendering: optimizeLegibility;
-  letter-spacing: -2px;
-}
-header#site #basic-info .info {
-  font-size: 13px;
-  line-height: 18px;
-  margin-bottom: 6px;
+  letter-spacing: -1px;
 }
 header#site #basic-info #services {
   letter-spacing: 10px;
+  margin: 10px 0 6px;
+  *zoom: 1;
+}
+header#site #basic-info #services:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
 }
 header#site #basic-info #services a {
   width: 24px;
   height: 24px;
   text-indent: -9999px;
-  *display: block;
-  *float: left;
-  *margin-right: 10px;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
+  display: block;
+  float: right;
+  margin-left: 10px;
 }
-header#site #basic-info #services a {
-  *display: inline;
+header#site #basic-info .info {
+  font-size: 13px;
+  line-height: 18px;
+  font: 24px/24px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
+  text-align: right;
+  text-rendering: optimizeLegibility;
+}
+header#site #basic-info .info .tel {
+  margin-right: .25em;
+}
+header#site #basic-info .info abbr {
+  letter-spacing: -2px;
 }
 
 nav#work {
@@ -297,15 +226,6 @@ nav#work {
   box-shadow: rgba(255, 13, 0, 0.8) 0 0 4px;
   border-bottom: 1px solid #ffbd42;
   margin-bottom: 24px;
-}
-nav#work h2 {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 1px;
-  color: white;
-  margin: 0;
-  padding-top: 12px;
 }
 nav#work ul {
   list-style: none;
@@ -333,32 +253,87 @@ nav#work a {
   text-decoration: none;
   padding: 12px 0;
   color: #ffa600;
-  font: 21px/24px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
+  font: 34px/24px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
   text-transform: uppercase;
   letter-spacing: -1px;
+  text-rendering: optimizeLegibility;
 }
 nav#work a.on {
   color: white;
   cursor: default;
 }
 
+#projects section {
+  width: 896px;
+  overflow: hidden;
+  position: relative;
+}
 #projects section header,
 #projects section .info {
   margin-bottom: 12px;
 }
-#projects section h3 {
-  font: 28px/24px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
-  letter-spacing: -3px;
+#projects section header h3,
+#projects section .info h3 {
+  font: 45px/48px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
+  letter-spacing: -1px;
   margin-bottom: 24px;
   color: #333;
 }
-#projects section h4 {
-  font: 21px/24px "BonvenoCFLight", GillSans, Calibri, Trebuchet, sans-serif;
-  letter-spacing: -2px;
+#projects section .pager {
+  width: 100%;
+  text-align: center;
+}
+#projects section .arrows .prev {
+  float: left;
+}
+#projects section .arrows .next {
+  float: right;
+}
+#projects section .panel-container {
+  clear: left;
+  position: relative;
+  -moz-transition-property: left;
+  -webkit-transition-property: left;
+  -o-transition-property: left;
+  transition-property: left;
+  -moz-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+#projects section .panel-container .panel {
+  width: 896px;
+  float: left;
+}
+#projects section .panel-container .panel h4 {
+  font: 28px/48px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
+  letter-spacing: -1px;
   margin: 12px 0;
 }
-#projects section img {
+#projects section .panel-container .panel img {
   cursor: pointer;
+  width: 344px;
+  margin-right: 24px;
+  float: left;
+  display: block;
+  -moz-transition-property: width;
+  -webkit-transition-property: width;
+  -o-transition-property: width;
+  transition-property: width;
+  -moz-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  position: relative;
+  z-index: 2;
+}
+#projects section .panel-container .panel img.zoom {
+  width: auto;
+  max-width: 896px;
+  float: none;
+  margin: 0 auto;
+  width: 896px;
+  float: none;
 }
 
 /* Default Layout: 992px.
@@ -387,7 +362,7 @@ header#site h1 {
 }
 header#site h2 {
   float: left;
-  margin: 0;
+  margin-top: 22px;
 }
 header#site #contact-info {
   float: right;
