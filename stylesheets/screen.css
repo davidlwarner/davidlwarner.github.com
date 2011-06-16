@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -55,12 +56,6 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* http://colorschemedesigner.com/#0242iw0w0w0w0 */
-/*
-$blue-hue: 220;
-$green-hue: 127;
-*/
-/* default scheme */
 /*@import "partials/slider";*/
 /* 11, 13, 17, 21, 27.5, 34, 44.5, 55, 72 */
 body {
@@ -97,7 +92,7 @@ p:last-child {
 }
 
 a {
-  color: #1147ac;
+  color: #f2fa67;
 }
 
 abbr {
@@ -106,11 +101,11 @@ abbr {
 }
 
 ::selection {
-  background: #ffcf75;
+  background: #f2fa67;
 }
 
 ::-moz-selection {
-  background: #ffcf75;
+  background: #f2fa67;
 }
 
 img::selection {
@@ -122,16 +117,13 @@ img::-moz-selection {
 }
 
 body {
-  -webkit-tap-highlight-color: #ffcf75;
-}
-
-html {
-  background: #eeeeee url("/images/bg.jpg");
+  -webkit-tap-highlight-color: #f2fa67;
 }
 
 body {
   margin: 0 auto;
   color: #222222;
+  background: #f2fa67;
 }
 
 .services-sprite, .services-email, .services-facebook, .services-linkedin, .services-twitter {
@@ -155,16 +147,17 @@ body {
 }
 
 header#site #basic-info {
-  background: #007980;
-  background: rgba(0, 121, 128, 0.75);
-  -moz-box-shadow: rgba(0, 121, 128, 0.75) 0 0 8px;
-  -webkit-box-shadow: rgba(0, 121, 128, 0.75) 0 0 8px;
-  -o-box-shadow: rgba(0, 121, 128, 0.75) 0 0 8px;
-  box-shadow: rgba(0, 121, 128, 0.75) 0 0 8px;
-  border-bottom: 1px solid #007980;
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid #7b0a04;
+  background: #e62117;
+  background: rgba(230, 33, 23, 0.8);
   color: white;
   padding: 6px 0;
-  text-shadow: rgba(0, 0, 0, 0.25) 0 0 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+  -o-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
 }
 header#site #basic-info h1 {
   font: 72px/72px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
@@ -172,15 +165,17 @@ header#site #basic-info h1 {
   text-rendering: optimizeLegibility;
   letter-spacing: -1px;
   margin-bottom: 0;
+  text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 1px;
 }
 header#site #basic-info h2 {
   font: 45px/45px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
   text-rendering: optimizeLegibility;
   letter-spacing: -1px;
+  text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 0;
 }
 header#site #basic-info #services {
   letter-spacing: 10px;
-  margin: 10px 0 6px;
+  margin: 7px 0 9px;
   *zoom: 1;
 }
 header#site #basic-info #services:after {
@@ -205,6 +200,8 @@ header#site #basic-info .info {
   font: 24px/24px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
   text-align: right;
   text-rendering: optimizeLegibility;
+  text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 0;
+  margin: 0;
 }
 header#site #basic-info .info .tel {
   margin-right: .25em;
@@ -213,21 +210,26 @@ header#site #basic-info .info abbr {
   letter-spacing: -2px;
 }
 
-nav#work {
-  background: #ff0d00;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(168, 8, 0, 0.8)), color-stop(50%, rgba(255, 13, 0, 0.8)), color-stop(100%, rgba(255, 13, 0, 0.8)));
-  background-image: -webkit-linear-gradient(rgba(168, 8, 0, 0.8), rgba(255, 13, 0, 0.8), rgba(255, 13, 0, 0.8));
-  background-image: -moz-linear-gradient(rgba(168, 8, 0, 0.8), rgba(255, 13, 0, 0.8), rgba(255, 13, 0, 0.8));
-  background-image: -o-linear-gradient(rgba(168, 8, 0, 0.8), rgba(255, 13, 0, 0.8), rgba(255, 13, 0, 0.8));
-  background-image: linear-gradient(rgba(168, 8, 0, 0.8), rgba(255, 13, 0, 0.8), rgba(255, 13, 0, 0.8));
-  -moz-box-shadow: rgba(255, 13, 0, 0.8) 0 0 4px;
-  -webkit-box-shadow: rgba(255, 13, 0, 0.8) 0 0 4px;
-  -o-box-shadow: rgba(255, 13, 0, 0.8) 0 0 4px;
-  box-shadow: rgba(255, 13, 0, 0.8) 0 0 4px;
-  border-bottom: 1px solid #ffbd42;
+#main {
+  background: #313d68;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4c5780), color-stop(96px, #313d68), color-stop(90%, #313d68), color-stop(100%, #1c264a));
+  background: -webkit-linear-gradient(top, #4c5780 0%, #313d68 96px, #313d68 90%, #1c264a);
+  background: -moz-linear-gradient(top, #4c5780 0%, #313d68 96px, #313d68 90%, #1c264a);
+  background: -o-linear-gradient(top, #4c5780 0%, #313d68 96px, #313d68 90%, #1c264a);
+  background: linear-gradient(top, #4c5780 0%, #313d68 96px, #313d68 90%, #1c264a);
+  border-top: 1px solid #313d68;
+  border-top: 1px solid #93969f;
+  border-bottom: 1px solid #b3b3b3;
+  color: white;
+  -moz-box-shadow: rgba(0, 0, 0, 0.75) 0 0 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0 0 5px;
+  -o-box-shadow: rgba(0, 0, 0, 0.75) 0 0 5px;
+  box-shadow: rgba(0, 0, 0, 0.75) 0 0 5px;
+}
+#main nav#work {
   margin-bottom: 24px;
 }
-nav#work ul {
+#main nav#work ul {
   list-style: none;
   margin: 0 auto;
   width: 896px;
@@ -242,98 +244,129 @@ nav#work ul {
   -webkit-box-align: stretch;
   box-align: stretch;
 }
-nav#work ul li {
+#main nav#work ul li {
   -moz-box-flex: 1;
   -webkit-box-flex: 1;
   box-flex: 1;
 }
-nav#work a {
+#main nav#work a {
   display: block;
   text-align: center;
   text-decoration: none;
   padding: 12px 0;
-  color: #ffa600;
-  font: 34px/24px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  text-rendering: optimizeLegibility;
-}
-nav#work a.on {
-  color: white;
-  cursor: default;
-}
-
-#projects section {
-  width: 896px;
-  overflow: hidden;
-  position: relative;
-}
-#projects section header,
-#projects section .info {
-  margin-bottom: 12px;
-}
-#projects section header h3,
-#projects section .info h3 {
   font: 45px/48px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
-  letter-spacing: -1px;
-  margin-bottom: 24px;
-  color: #333;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  text-shadow: rgba(49, 61, 104, 0.5) 1px 1px 0;
 }
-#projects section .pager {
-  width: 100%;
+#main nav#work a.on {
+  cursor: default;
+  color: white;
+}
+#main nav#work a:hover {
+  text-shadow: rgba(49, 61, 104, 0.5) 1px 1px 0, rgba(255, 255, 255, 0.5) 0 0 5px;
+}
+#main nav#work a:hover.on {
+  text-shadow: rgba(49, 61, 104, 0.5) 1px 1px 0;
+}
+#main #projects section {
+  width: 896px;
+}
+#main #projects section h3 {
+  margin: 48px 0 0;
+  font: 34px/48px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
+  text-align: center;
+  clear: left;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#main #projects section h3:before, #main #projects section h3:after {
+  content: "◆◆◆";
+  margin: 0 8em;
+  font-size: 13px;
+  line-height: 0;
+  letter-spacing: 20px;
+}
+#main #projects section h4 {
+  text-align: center;
+  margin-bottom: 24px;
+  font: 21px/24px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
+}
+#main #projects section h4 a {
+  margin-right: 1em;
+}
+#main #projects section h5 {
+  font: 28px/48px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
+  margin: 12px 0;
+  letter-spacing: -1px;
+  clear: left;
   text-align: center;
 }
-#projects section .arrows .prev {
-  float: left;
+#main #projects section p {
+  width: 712px;
+  margin-left: 92px;
 }
-#projects section .arrows .next {
-  float: right;
+#main #projects section .thumb {
+  *zoom: 1;
+  min-height: 216px;
 }
-#projects section .panel-container {
-  clear: left;
-  position: relative;
-  -moz-transition-property: left;
-  -webkit-transition-property: left;
-  -o-transition-property: left;
-  transition-property: left;
-  -moz-transition-duration: 1s;
-  -webkit-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
+#main #projects section .thumb:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
 }
-#projects section .panel-container .panel {
-  width: 896px;
-  float: left;
+#main #projects section .thumb p {
+  width: auto;
+  margin-left: 368px;
 }
-#projects section .panel-container .panel h4 {
-  font: 28px/48px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
-  letter-spacing: -1px;
-  margin: 12px 0;
-}
-#projects section .panel-container .panel img {
+#main #projects section .thumb img {
   cursor: pointer;
   width: 344px;
   margin-right: 24px;
-  float: left;
   display: block;
-  -moz-transition-property: width;
-  -webkit-transition-property: width;
-  -o-transition-property: width;
-  transition-property: width;
+  position: absolute;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
   -moz-transition-duration: 1s;
   -webkit-transition-duration: 1s;
   -o-transition-duration: 1s;
   transition-duration: 1s;
-  position: relative;
-  z-index: 2;
 }
-#projects section .panel-container .panel img.zoom {
-  width: auto;
-  max-width: 896px;
-  float: none;
-  margin: 0 auto;
+#main #projects section .thumb img.zoom {
+  z-index: 9999;
   width: 896px;
-  float: none;
+  -moz-box-shadow: rgba(0, 0, 0, 0.75) 0 3px 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0 3px 10px;
+  -o-box-shadow: rgba(0, 0, 0, 0.75) 0 3px 10px;
+  box-shadow: rgba(0, 0, 0, 0.75) 0 3px 10px;
+}
+
+footer {
+  font-size: 13px;
+  line-height: 48px;
+  *zoom: 1;
+}
+footer:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+footer a {
+  color: #313d68;
+}
+footer .left {
+  float: left;
+}
+footer .right {
+  float: right;
 }
 
 /* Default Layout: 992px.
@@ -355,30 +388,30 @@ nav#work a.on {
   visibility: hidden;
 }
 
-header#site h1 {
+header#site #my-photo {
+  position: relative;
+}
+header#site #my-photo img.photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header#site #basic-info h1 {
   width: 344px;
   margin-right: 24px;
   float: left;
 }
-header#site h2 {
+header#site #basic-info h2 {
   float: left;
   margin-top: 22px;
 }
-header#site #contact-info {
+header#site #basic-info #contact-info {
   float: right;
-}
-header#site #contact-info p {
-  margin: 0;
 }
 header#site #about-me {
   padding: 24px 0;
-  min-height: 188px;
-  position: relative;
-}
-header#site #about-me img.photo {
-  position: absolute;
-  z-index: 1;
-  left: 0;
+  min-height: 200px;
+  text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
 }
 header#site #about-me #bio {
   width: 528px;
@@ -389,73 +422,10 @@ header#site #about-me #bio {
 #main {
   position: relative;
   z-index: 2;
-  background: #eeeeee url("/images/bg.jpg");
 }
 #main #projects {
-  /*    @include background-image(linear-gradient(rgba(0, 0, 0, 0), 
-                                                rgba(0, 0, 0, 0),
-                                                rgba(0, 0, 0, 0.15)));*/
   min-height: 600px;
-}
-#main #projects header {
-  float: left;
-  width: 160px;
-  margin-right: 24px;
-}
-#main #projects .info {
-  float: left;
-  width: 712px;
-}
-#main #projects .coda-slider {
-  width: 896px;
-  min-height: 540px;
-}
-#main #projects .coda-slider .panel {
-  width: 896px;
-  position: relative;
-}
-#main #projects .coda-slider img {
-  width: 344px;
-  margin-right: 24px;
-  float: left;
-  display: block;
-  -moz-transition-property: width;
-  -webkit-transition-property: width;
-  -o-transition-property: width;
-  transition-property: width;
-  -moz-transition-duration: 1s;
-  -webkit-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
-  position: relative;
-  z-index: 2;
-}
-#main #projects .coda-slider img.zoom {
-  /*          width: auto;
-            max-width: 896px; // 10col
-            float: none;
-            margin: 0 auto;*/
-  width: 896px;
-  float: none;
-}
-#main #projects .coda-slider .about {
-  width: 528px;
-  left: 368px;
-  margin-top: 48px;
-  -moz-transition-property: opacity;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-  -moz-transition-duration: 1s;
-  -webkit-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
-  z-index: 1;
-  position: absolute;
-  top: 0;
-}
-#main #projects .coda-slider .about.hide {
-  opacity: 0;
+  padding-bottom: 360px;
 }
 
 /*
