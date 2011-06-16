@@ -92,7 +92,7 @@ p:last-child {
 }
 
 a {
-  color: #f2fa67;
+  color: #fffc01;
 }
 
 abbr {
@@ -101,11 +101,11 @@ abbr {
 }
 
 ::selection {
-  background: #f2fa67;
+  background: #fffc01;
 }
 
 ::-moz-selection {
-  background: #f2fa67;
+  background: #fffc01;
 }
 
 img::selection {
@@ -117,13 +117,13 @@ img::-moz-selection {
 }
 
 body {
-  -webkit-tap-highlight-color: #f2fa67;
+  -webkit-tap-highlight-color: #fffc01;
 }
 
 body {
   margin: 0 auto;
   color: #222222;
-  background: #f2fa67;
+  background: #fffc01;
 }
 
 .services-sprite, .services-email, .services-facebook, .services-linkedin, .services-twitter {
