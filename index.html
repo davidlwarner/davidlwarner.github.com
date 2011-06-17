@@ -15,22 +15,23 @@
     <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'>
     <link href='/favicon.ico' rel='shortcut icon'>
     <link href='/apple-touch-icon.png' rel='apple-touch-icon'>
+    <link href='/apple-touch-icon-ipad.png' rel='apple-touch-icon' sizes='72x72'>
+    <link href='/apple-touch-icon-iphone4.png' rel='apple-touch-icon' sizes='114x114'>
   </head>
   <body>
     <header class='vcard' id='site' itemscope itemtype='http://schema.org/Person'>
-      <div class='container' id='my-photo'>
-        <img alt="Me" class="photo" itemprop="image" src="images/me.jpg">
-      </div>
       <div id='basic-info'>
         <div class='container'>
-          <h1 class='fn' itemprop='name'>David L Warner</h1>
-          <h2 class='role'>UX Designer & Developer</h2>
+          <div class='name-title'>
+            <h1 class='fn' itemprop='name'>David L Warner</h1>
+            <h2 class='title role'>UX Designer & Developer</h2>
+          </div>
           <div id='contact-info'>
             <p id='services'>
               <a class='services-linkedin url' href='http://www.linkedin.com/in/davidlwarner' rel='me'>LinkedIn</a>
               <a class='services-twitter url' href='http://twitter.com/davidlwarner' rel='me'>Twitter</a>
               <a class='services-facebook url' href='http://www.facebook.com/davidw' rel='me'>Facebook</a>
-              <a class='services-email email' href='mailto:david@davidlwarner.com' itemprop='email'>david@davidlwarner.com</a>
+              <a class='services-email email' href='mailto:david@davidlwarner.com' itemprop='email' rel='author'>david@davidlwarner.com</a>
             </p>
             <p class='info'>
               <span class='tel' itemprop='telephone'>415-609-7490</span>
@@ -48,6 +49,9 @@
           <p>I&#8217;ve worked with Adaptive Path, Allstate, the Metropolitan Opera, Ning, and RealNetworks. In my spare time, I geek out on music.</p>
         </div>
       </div>
+      <div class='container' id='my-photo'>
+        <img alt="Me" class="photo" itemprop="image" src="images/me.jpg">
+      </div>
     </header>
     <div id='main'>
       <nav id='work'>
@@ -63,6 +67,7 @@
       </nav>
       <div class='container' id='projects'>
         <section id='design'>
+          <h2>Design</h2>
           <p>I create clear, functional interfaces. It’s important that I can write the front-end code for my designs so that I can embrace possibilities and avoid pitfalls. My design process is collaborative and relies on quick experiments to find solutions that help users, while meeting technical and business objectives.</p>
           <h3>Ning</h3>
           <h4>
@@ -111,6 +116,7 @@
           </div>
         </section>
         <section id='development'>
+          <h2>Development</h2>
           <p>I started my career as a front-end website developer after getting a Computer Science degree. I strive to write clean and maintainable code that uses modern practices while supporting popular older web browsers. Being able to write high-quality front-end code is key to my design process and working closely with engineering teams.</p>
           <h3>Ning</h3>
           <h4>
@@ -146,6 +152,7 @@
           </div>
         </section>
         <section id='leadership'>
+          <h2>Leadership</h2>
           <p>In addition to design and front-end development, I’ve also led projects and teams.</p>
           <h3>Ning</h3>
           <h4>
@@ -186,13 +193,6 @@
       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
-    <!-- %script{ :src => "/js/jquery.coda-slider-2.0.js" } -->
-    <!-- %script{ :src => "/js/jquery.animate-enhanced.min.js" } -->
-    <!-- %script{ :src => "http://cycle-plugin.googlecode.com/files/jquery.cycle.all.min.js" } -->
-    <!-- %script{ :src => "/js/ios-scroll.js" } -->
-    <!-- %script{ :src => "/js/jquery.cycle.all.min.js" } -->
-    <!-- %script{ :src => "/js/jquery.touchwipe.min.js" } -->
     <script src='/js/script.js'></script>
-    <!-- %script{ :src => "/js/jqbrowser-compressed.js" } -->
   </body>
 </html>

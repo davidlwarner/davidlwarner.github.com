@@ -56,19 +56,10 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/*@import "partials/slider";*/
 /* 11, 13, 17, 21, 27.5, 34, 44.5, 55, 72 */
 body {
   font: 17px/24px "OFL Sorts Mill Goudy TT", Georgia, serif;
   -webkit-font-smoothing: antialiased;
-}
-
-@font-face {
-  font-family: 'BonvenoCFLight';
-  src: url("/fonts/BonvenoCF-Light-webfont.eot");
-  src: url("/fonts/BonvenoCF-Light-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/BonvenoCF-Light-webfont.woff") format("woff"), url("/fonts/BonvenoCF-Light-webfont.ttf") format("truetype"), url("/fonts/BonvenoCF-Light-webfont.svg#BonvenoCFLight") format("svg");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
@@ -82,6 +73,19 @@ body {
 .small, small {
   font-size: 13px;
   line-height: 18px;
+}
+
+.container {
+  margin: 0 auto;
+  *zoom: 1;
+}
+.container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 p {
@@ -148,7 +152,7 @@ body {
 
 header#site #basic-info {
   position: relative;
-  z-index: 2;
+  z-index: 6;
   border-bottom: 1px solid #7b0a04;
   background: #e62117;
   background: rgba(230, 33, 23, 0.8);
@@ -160,7 +164,7 @@ header#site #basic-info {
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
 }
 header#site #basic-info h1 {
-  font: 72px/72px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
+  font: 72px/72px "LeagueGothicRegular", Helvetica, "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
   letter-spacing: -1px;
@@ -168,7 +172,7 @@ header#site #basic-info h1 {
   text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 1px;
 }
 header#site #basic-info h2 {
-  font: 45px/45px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
+  font: 45px/45px "LeagueGothicRegular", Helvetica, "Helvetica Neue", Arial, sans-serif;
   text-rendering: optimizeLegibility;
   letter-spacing: -1px;
   text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 0;
@@ -195,9 +199,7 @@ header#site #basic-info #services a {
   margin-left: 10px;
 }
 header#site #basic-info .info {
-  font-size: 13px;
-  line-height: 18px;
-  font: 24px/24px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
+  font: 24px/24px "LeagueGothicRegular", Helvetica, "Helvetica Neue", Arial, sans-serif;
   text-align: right;
   text-rendering: optimizeLegibility;
   text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 0;
@@ -232,8 +234,6 @@ header#site #basic-info .info abbr {
 #main nav#work ul {
   list-style: none;
   margin: 0 auto;
-  width: 896px;
-  margin-right: 24px;
   display: -moz-box;
   display: -webkit-box;
   display: box;
@@ -254,7 +254,7 @@ header#site #basic-info .info abbr {
   text-align: center;
   text-decoration: none;
   padding: 12px 0;
-  font: 45px/48px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
+  font: 45px/48px "LeagueGothicRegular", Helvetica, "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
   text-shadow: rgba(49, 61, 104, 0.5) 1px 1px 0;
@@ -269,12 +269,12 @@ header#site #basic-info .info abbr {
 #main nav#work a:hover.on {
   text-shadow: rgba(49, 61, 104, 0.5) 1px 1px 0;
 }
-#main #projects section {
-  width: 896px;
+#main #projects h2 {
+  display: none;
 }
 #main #projects section h3 {
   margin: 48px 0 0;
-  font: 34px/48px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
+  font: 34px/48px "LeagueGothicRegular", Helvetica, "Helvetica Neue", Arial, sans-serif;
   text-align: center;
   clear: left;
   letter-spacing: 1px;
@@ -290,13 +290,13 @@ header#site #basic-info .info abbr {
 #main #projects section h4 {
   text-align: center;
   margin-bottom: 24px;
-  font: 21px/24px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
+  font: 21px/24px "LeagueGothicRegular", Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 #main #projects section h4 a {
   margin-right: 1em;
 }
 #main #projects section h5 {
-  font: 28px/48px "LeagueGothicRegular", GillSans, Calibri, Trebuchet, sans-serif;
+  font: 28px/48px "LeagueGothicRegular", Helvetica, "Helvetica Neue", Arial, sans-serif;
   margin: 12px 0;
   letter-spacing: -1px;
   clear: left;
@@ -304,11 +304,10 @@ header#site #basic-info .info abbr {
 }
 #main #projects section p {
   width: 712px;
-  margin-left: 92px;
 }
 #main #projects section .thumb {
+  margin-bottom: 24px;
   *zoom: 1;
-  min-height: 216px;
 }
 #main #projects section .thumb:after {
   content: "\0020";
@@ -320,14 +319,10 @@ header#site #basic-info .info abbr {
 }
 #main #projects section .thumb p {
   width: auto;
-  margin-left: 368px;
 }
 #main #projects section .thumb img {
   cursor: pointer;
-  width: 344px;
-  margin-right: 24px;
   display: block;
-  position: absolute;
   -moz-transition-property: all;
   -webkit-transition-property: all;
   -o-transition-property: all;
@@ -376,16 +371,6 @@ footer .right {
 .container {
   width: 896px;
   /*    padding: 72px 48px 84px;*/
-  margin: 0 auto;
-  *zoom: 1;
-}
-.container:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
 }
 
 header#site #my-photo {
@@ -393,7 +378,7 @@ header#site #my-photo {
 }
 header#site #my-photo img.photo {
   position: absolute;
-  top: 0;
+  top: -344px;
   left: 0;
 }
 header#site #basic-info h1 {
@@ -421,16 +406,431 @@ header#site #about-me #bio {
 
 #main {
   position: relative;
-  z-index: 2;
+  z-index: 6;
+}
+#main nav#work ul {
+  width: 896px;
+  margin-right: 24px;
 }
 #main #projects {
-  min-height: 600px;
   padding-bottom: 360px;
 }
+#main #projects section {
+  width: 896px;
+}
+#main #projects section p {
+  margin-left: 92px;
+}
+#main #projects section .thumb {
+  min-height: 216px;
+}
+#main #projects section .thumb img {
+  width: 344px;
+  margin-right: 24px;
+  position: absolute;
+}
+#main #projects section .thumb p {
+  width: auto;
+  margin-left: 368px;
+}
 
-/*
-@import "partials/tablet";
-@import "partials/mobile";
-@import "partials/wide-mobile";
-@import "partials/high-px-ratio";
-*/
+/* Tablet Layout: 768px.
+   Gutters: 24px.
+   Outer margins: 28px.
+   Inherits styles from: Default Layout.  */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 712px;
+    /*    padding: 48px 28px 60px;*/
+  }
+
+  header#site #basic-info h1 {
+    width: 344px;
+    margin-right: 24px;
+    float: left;
+  }
+  header#site #basic-info h2 {
+    float: left;
+    font-size: 34px;
+    margin: 0;
+  }
+  header#site #basic-info #contact-info {
+    float: none;
+  }
+  header#site #basic-info #services {
+    margin: 0;
+    height: 45px;
+  }
+  header#site #basic-info #services a {
+    margin-top: 11px;
+  }
+  header#site #basic-info .info {
+    line-height: 18px;
+    text-align: left;
+  }
+  header#site #about-me {
+    padding: 24px 0;
+    min-height: 200px;
+    text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
+  }
+  header#site #about-me #bio {
+    width: 344px;
+    margin-left: 368px;
+    float: left;
+  }
+
+  #main nav#work ul {
+    width: 712px;
+    margin-right: 24px;
+  }
+  #main #projects {
+    padding-bottom: 200px;
+  }
+  #main #projects section {
+    width: 712px;
+  }
+  #main #projects section p {
+    margin-left: 0;
+  }
+  #main #projects section .thumb img {
+    width: 344px;
+    margin-right: 24px;
+  }
+  #main #projects section .thumb img.zoom {
+    width: 712px;
+  }
+}
+/* Mobile Layout: 320px.
+   Gutters: 24px.
+   Outer margins: 34px.
+   Inherits styles from: Default Layout.  */
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 252px;
+    /*    padding: 48px 34px 60px;*/
+  }
+
+  body {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  header#site #basic-info {
+    *zoom: 1;
+  }
+  header#site #basic-info:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  header#site #basic-info .name-title {
+    text-align: center;
+  }
+  header#site #basic-info h1 {
+    font-size: 34px;
+    line-height: 34px;
+    width: auto;
+    float: none;
+    margin-right: 0;
+  }
+  header#site #basic-info h2 {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0;
+    float: none;
+  }
+  header#site #basic-info #contact-info {
+    float: none;
+  }
+  header#site #basic-info #contact-info #services {
+    text-align: center;
+  }
+  header#site #basic-info #contact-info #services a {
+    float: none;
+    margin: 0 5px;
+    display: -moz-inline-box;
+    -moz-box-orient: vertical;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+  }
+  header#site #basic-info #contact-info #services a {
+    *display: inline;
+  }
+  header#site #basic-info #contact-info .info {
+    text-align: center;
+  }
+  header#site #about-me {
+    background: rgba(255, 252, 1, 0.75);
+    position: relative;
+    z-index: 5;
+  }
+  header#site #about-me #bio {
+    width: 252px;
+    margin-left: 0;
+    float: none;
+  }
+  header#site #my-photo img.photo {
+    top: auto;
+    bottom: 0;
+    width: 252px;
+  }
+
+  #main nav#work {
+    margin-bottom: 12px;
+  }
+  #main nav#work ul {
+    width: 252px;
+    margin-right: 24px;
+  }
+  #main nav#work a {
+    font-size: 21px;
+    line-height: 24px;
+  }
+  #main #projects {
+    padding-bottom: 0;
+  }
+  #main #projects section {
+    width: 252px;
+  }
+  #main #projects section h3 {
+    margin-top: 24px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #main #projects section h3:before, #main #projects section h3:after {
+    margin: 0 1em;
+    letter-spacing: 3px;
+  }
+  #main #projects section p {
+    width: 252px;
+    margin-left: 0;
+  }
+  #main #projects section .thumb p {
+    margin-left: 0;
+  }
+  #main #projects section .thumb img {
+    width: 252px;
+    margin: 0 0 24px;
+    position: static;
+  }
+  #main #projects section .thumb img.zoom {
+    width: 252px;
+  }
+
+  footer {
+    font-size: 13px;
+    line-height: 24px;
+    text-align: center;
+    padding: 12px 0;
+  }
+  footer .left, footer .right {
+    float: none;
+  }
+}
+/* Wide Mobile Layout: 480px.
+   Gutters: 24px.
+   Outer margins: 22px.
+   Inherits styles from: Default Layout, Mobile Layout.  */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    width: 436px;
+    /*    padding: 36px 22px 48px;*/
+  }
+
+  body {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  header#site #basic-info .name-title {
+    float: left;
+    text-align: left;
+  }
+  header#site #basic-info #contact-info {
+    float: right;
+  }
+  header#site #basic-info #contact-info #services {
+    float: right;
+  }
+  header#site #basic-info #contact-info #services a {
+    margin: 0 0 0 10px;
+  }
+  header#site #basic-info #contact-info .info {
+    text-align: right;
+    clear: right;
+  }
+  header#site #about-me #bio {
+    width: 436px;
+  }
+  header#site #my-photo img.photo {
+    right: 0;
+    left: auto;
+  }
+
+  #main nav#work ul {
+    width: 436px;
+    margin-right: 24px;
+  }
+  #main nav#work a {
+    font-size: 28px;
+  }
+  #main #projects section {
+    width: 436px;
+  }
+  #main #projects section h3:before, #main #projects section h3:after {
+    margin: 0 2em;
+  }
+  #main #projects section p {
+    width: 436px;
+  }
+  #main #projects section .thumb img {
+    width: 436px;
+  }
+  #main #projects section .thumb img.zoom {
+    width: 436px;
+  }
+}
+/* Retina media query.
+   Overrides styles for devices with a
+   device-pixel-ratio of 2+, such as iPhone 4.  */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .services-email,
+  .services-facebook,
+  .services-linkedin,
+  .services-twitter {
+    background-image: url('/images/services-48-35ae416391.png');
+    background-size: 100% auto;
+  }
+}
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    border: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  a, a:visited {
+    color: #333333 !important;
+    text-decoration: underline;
+  }
+
+  img {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3, h4, h5 {
+    page-break-after: avoid;
+  }
+
+  .name-title {
+    float: left;
+    margin-left: 92px;
+    width: 344px;
+    margin-right: 24px;
+  }
+  .name-title h2 {
+    margin-top: 12px !important;
+  }
+
+  #contact-info {
+    float: right;
+    width: 436px;
+    position: relative;
+  }
+  #contact-info #services {
+    margin-top: 56px !important;
+    text-align: left !important;
+  }
+  #contact-info #services a {
+    font-size: 13px;
+    line-height: 18px;
+    display: block !important;
+    float: none !important;
+    width: auto !important;
+    height: auto !important;
+    text-indent: 0 !important;
+    background: none !important;
+    letter-spacing: 0 !important;
+    text-decoration: none !important;
+    margin: 0 !important;
+  }
+  #contact-info #services a:after {
+    content: ": " attr(href);
+  }
+  #contact-info #services a.email:before {
+    content: "Email: ";
+  }
+  #contact-info #services a.email:after {
+    content: "";
+  }
+  #contact-info .info {
+    position: absolute !important;
+    top: 6px;
+    left: 0;
+  }
+
+  #bio {
+    margin-left: 92px !important;
+    width: 712px !important;
+  }
+
+  #my-photo {
+    display: none !important;
+  }
+
+  nav#work {
+    display: none !important;
+  }
+
+  #projects {
+    padding-bottom: 0 !important;
+  }
+  #projects section {
+    display: block !important;
+  }
+  #projects section h2 {
+    margin: 0 92px 24px !important;
+    padding: 12px 0 6px !important;
+    display: block !important;
+    font: 45px/45px "LeagueGothicRegular", Helvetica, "Helvetica Neue", Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -1px;
+    border: 1px solid black !important;
+    border-width: 2px 0 1px !important;
+  }
+  #projects section img {
+    width: 698px !important;
+    border: 2px solid #999999 !important;
+    padding: 5px !important;
+    margin-bottom: 24px !important;
+  }
+  #projects section p {
+    width: 712px !important;
+  }
+  #projects section img, #projects section p {
+    margin-left: 92px !important;
+    position: static !important;
+  }
+
+  footer {
+    display: none !important;
+  }
+}
