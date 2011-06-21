@@ -105,11 +105,11 @@ abbr {
 }
 
 ::selection {
-  background: #fffc01;
+  background: #7b0a04;
 }
 
 ::-moz-selection {
-  background: #fffc01;
+  background: #7b0a04;
 }
 
 img::selection {
@@ -121,7 +121,7 @@ img::-moz-selection {
 }
 
 body {
-  -webkit-tap-highlight-color: #fffc01;
+  -webkit-tap-highlight-color: #7b0a04;
 }
 
 body {
@@ -210,6 +210,9 @@ header#site #basic-info .info .tel {
 }
 header#site #basic-info .info abbr {
   letter-spacing: -2px;
+}
+header#site #about-me a {
+  color: #313d68;
 }
 
 #main {
